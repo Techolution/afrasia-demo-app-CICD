@@ -91,7 +91,8 @@ RUN set -x \
         apt-get purge -y --auto-remove \
         && rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; \
     fi
-
+RUN rm /usr/share/nginx/html/index.html
+COPY index.html /usr/share/nginx/html/index.html
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
