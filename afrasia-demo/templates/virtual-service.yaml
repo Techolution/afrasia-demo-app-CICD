@@ -15,4 +15,3 @@ spec:
         host: afrasia-demo-blue-green
         subset: canary
       weight: {{ .Values.vs.canaryWeight }}
-
