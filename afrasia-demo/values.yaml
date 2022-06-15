@@ -5,14 +5,19 @@
 replicaCount: 1
 
 image:
-  repository: push gcr.io/afrasia-openshift-test/afrasia-demo-blue-green
+  repository: gcr.io/afrasia-openshift-test/afrasia-demo-blue-green
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  BlueTag: latest
+  GreenTag: latest
 
 imagePullSecrets: []
 nameOverride: "afrasia-demo-blue-green"
 fullnameOverride: "afrasia-demo-blue-green"
+
+vs:
+  prodductionWeight: 60
+  canaryWeight: 40
 
 serviceAccount:
   # Specifies whether a service account should be created

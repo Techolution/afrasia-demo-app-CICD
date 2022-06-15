@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: afrasia-demo-blue-green
+spec:
+  host: afrasia-demo-blue-green
+  subsets:
+  - name: production
+    labels:
+      canary: "false"
+  - name: canary
+    labels:
+      canary: "true"
