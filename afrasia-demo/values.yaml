@@ -16,8 +16,8 @@ nameOverride: "afrasia-demo-blue-green"
 fullnameOverride: "afrasia-demo-blue-green"
 
 vs:
-  prodductionWeight: 60
-  canaryWeight: 40
+  prodductionWeight: 80
+  canaryWeight: 20
 
 serviceAccount:
   # Specifies whether a service account should be created
