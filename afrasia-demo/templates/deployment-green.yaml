@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: afrasia-demo-blue-green-green
   labels:
-    version: blue
-    canary: "false"
+    version: green
+    canary: "true"
     app: afrasia-demo-blue-green
     {{- include "afrasia-demo.labels" . | nindent 4 }}
 spec:
@@ -21,8 +21,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        version: blue
-        canary: "false"
+        version: green
+        canary: "true"
         app: afrasia-demo-blue-green
         {{- include "afrasia-demo.selectorLabels" . | nindent 8 }}
     spec:
