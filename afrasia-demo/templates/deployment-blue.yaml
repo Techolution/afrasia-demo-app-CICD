@@ -4,7 +4,7 @@ metadata:
   name: {{ include "afrasia-demo.fullname" . }}
   labels:
     version: blue
-    canary: false
+    canary: "false"
     app: afrasia-demo-blue-green
     {{- include "afrasia-demo.labels" . | nindent 4 }}
 spec:
@@ -22,7 +22,7 @@ spec:
       {{- end }}
       labels:
         version: blue
-        canary: false
+        canary: "false"
         app: afrasia-demo-blue-green
         {{- include "afrasia-demo.selectorLabels" . | nindent 8 }}
     spec:
