@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "afrasia-demo.fullname" . }}
+  name: afrasia-demo-blue-green-blue
   labels:
     version: blue
     canary: "false"
