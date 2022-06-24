@@ -5,15 +5,15 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/afrasia-openshift-test/afrasia-demo-blue-green
+  repository: gcr.io/anthos-lab-usdc/demo-blue-green
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   BlueTag: latest
   GreenTag: latest
 
 imagePullSecrets: []
-nameOverride: "afrasia-demo-blue-green"
-fullnameOverride: "afrasia-demo-blue-green"
+nameOverride: "demo-blue-green"
+fullnameOverride: "demo-blue-green"
 
 vs:
   prodductionWeight: 80
