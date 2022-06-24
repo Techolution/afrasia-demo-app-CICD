@@ -1,9 +1,9 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: afrasia-demo-blue-green
+  name: demo-blue-green
 spec:
-  host: afrasia-demo-blue-green
+  host: demo-blue-green
   subsets:
   - name: production
     labels:
