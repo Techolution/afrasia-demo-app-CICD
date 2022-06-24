@@ -1,17 +1,17 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: afrasia-demo-blue-green
+  name: demo-blue-green
 spec:
   hosts:
-  - "afrasia-demo-blue-green"
+  - "demo-blue-green"
   http:
   - route:
     - destination:
-        host: afrasia-demo-blue-green
+        host: demo-blue-green
         subset: production
       weight: {{ .Values.vs.prodductionWeight }}
     - destination:
-        host: afrasia-demo-blue-green
+        host: demo-blue-green
         subset: canary
       weight: {{ .Values.vs.canaryWeight }}
